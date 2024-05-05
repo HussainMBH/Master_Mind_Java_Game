@@ -22,7 +22,7 @@ public class MasterMindGame {
         Scanner scanner = new Scanner(System.in);
 
         // select game number
-        System.out.println("Welcome to Master Mind!");
+        System.out.println("Welcome to Master Mind Game!");
         System.out.println("Enter the number of pawns (4 or 5):");
         int numPawns = scanner.nextInt();
         System.out.println("Enter the number of colors (6 to 8):");
