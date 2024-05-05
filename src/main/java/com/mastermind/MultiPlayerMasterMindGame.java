@@ -64,12 +64,12 @@ public class MultiPlayerMasterMindGame {
                 board.addAttempt(playerAttempt);
                 // display board and feedback
                 GameDisplay.displayBoard(board);
-                if (result.getCorrectColorAndPosition() == numPawns) {
+                if (result.getCorrectPosition() == numPawns) {
                     System.out.println("Congratulations! Player " + round + " guessed the combination!");
                     scores[round - 1] += numAttempts - attempt + 1;
                     break;
                 } else {
-                    System.out.println("Correct position: " + result.getCorrectColorAndPosition() +
+                    System.out.println("Correct position: " + result.getCorrectPosition() +
                             ", Correct color: " + result.getCorrectColor());
                 }
                 if (attempt == numAttempts) {

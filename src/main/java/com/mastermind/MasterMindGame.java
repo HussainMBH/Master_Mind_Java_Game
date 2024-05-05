@@ -45,11 +45,11 @@ public class MasterMindGame {
             AttemptResult result = secretCombination.validateAttempt(playerAttempt);
             board.addAttempt(playerAttempt);
             GameDisplay.displayBoard(board);
-            if (result.getCorrectColorAndPosition() == numPawns) {
+            if (result.getCorrectPosition() == numPawns) {
                 System.out.println("Congratulations! You guessed the combination!");
                 break;
             } else {
-                System.out.println("Correct position: " + result.getCorrectColorAndPosition() +
+                System.out.println("Correct position: " + result.getCorrectPosition() +
                         ", Correct color: " + result.getCorrectColor());
             }
             if (attempt == numAttempts) {
