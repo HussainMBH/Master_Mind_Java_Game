@@ -43,7 +43,7 @@ public class MasterMindGame {
             List<Pawn> attemptPawns = readAttempt(numPawns, numColors, scanner);
             Combination playerAttempt = new Combination(attemptPawns);
             AttemptResult result = secretCombination.validateAttempt(playerAttempt);
-            board.addAttempt(playerAttempt);
+            board.addAttempt(playerAttempt, result);
             GameDisplay.displayBoard(board);
             if (result.getCorrectPosition() == numPawns) {
                 System.out.println("Congratulations! You guessed the combination!");

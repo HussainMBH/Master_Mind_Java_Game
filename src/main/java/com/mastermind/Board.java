@@ -11,6 +11,7 @@ public class Board {
     public Board(Combination secretCombination) {
         this.secretCombination = secretCombination;
         this.attempts = new ArrayList<>();
+        this.attemptResults = new ArrayList<>();
     }
 
     public Combination getSecretCombination() {
@@ -38,5 +39,9 @@ public class Board {
     // Method to get attempt results
     public List<AttemptResult> getAttemptResults() {
         return attemptResults;
-}
+    }
+    public void addAttempt(Combination attempt, AttemptResult result) {
+        attempts.add(attempt);
+        attemptResults.add(result);
+    }
 }
