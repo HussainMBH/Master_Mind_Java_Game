@@ -17,7 +17,7 @@ public class Combination {
 
     public AttemptResult validateAttempt(Combination attempt) {
         // Initialize variables to count correct color and position, and only correct color
-        int correctColorAndPosition = 0;
+        int correctPosition = 0;
         int correctColor = 0;
 
         Map<String, Integer> secretColorCount = new HashMap<>();
@@ -38,7 +38,7 @@ public class Combination {
         // calculate the number of pawns with correct color and position
         for (int i = 0; i < pawns.size(); i++) {
             if (pawns.get(i).getColor().equals(attempt.getPawns().get(i).getColor())) {
-                correctColorAndPosition++;
+                correctPosition++;
                 // Decrement the count for this color in both maps
                 String color = pawns.get(i).getColor();
                 secretColorCount.put(color, secretColorCount.get(color) - 1);
@@ -53,6 +53,6 @@ public class Combination {
             }
         }
 
-        return new AttemptResult(correctColorAndPosition, correctColor);
+        return new AttemptResult(correctPosition, correctColor);
     }
 }
