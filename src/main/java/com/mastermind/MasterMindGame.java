@@ -78,7 +78,7 @@ public class MasterMindGame {
         for (int i = 0; i < numPawns; i++) {
             int color = scanner.nextInt();
             if (color < 1 || color > numColors) {
-                System.out.println("Invalid color! Please enter a number between 1 and " + numColors);
+                System.out.println("Invalid number! Please enter a number between 1 and " + numColors);
                 i--; // repeat the loop iteration to re-enter the color
                 continue;
             }
