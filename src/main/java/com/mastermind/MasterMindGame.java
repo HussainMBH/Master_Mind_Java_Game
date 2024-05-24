@@ -73,6 +73,7 @@ public class MasterMindGame {
         return new Combination(pawns);
     }
 
+    //it's add number in combination
     private static List<Pawn> readAttempt(int numPawns, int numColors, Scanner scanner) {
         List<Pawn> attemptPawns = new ArrayList<>();
         for (int i = 0; i < numPawns; i++) {
